@@ -1,4 +1,4 @@
-package com.example.drewcaltagirone.eventlogging;
+package com.example.drewcaltagirone.coffeebreak;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -24,11 +24,11 @@ import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
 
-public class NewEvent extends AppCompatActivity {
+public class NewUser extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_event);
+        setContentView(R.layout.activity_new_user);
 
     }
 

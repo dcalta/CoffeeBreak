@@ -1,4 +1,4 @@
-package com.example.drewcaltagirone.eventlogging;
+package com.example.drewcaltagirone.coffeebreak;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

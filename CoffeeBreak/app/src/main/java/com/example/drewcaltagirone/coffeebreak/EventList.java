@@ -1,4 +1,4 @@
-package com.example.drewcaltagirone.eventlogging;
+package com.example.drewcaltagirone.coffeebreak;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -22,7 +22,7 @@ import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
 
-public class EventLogging extends AppCompatActivity {
+public class EventList extends AppCompatActivity {
 
     private ListView myListView;
     private final String TAG = "ListView";
@@ -30,9 +30,9 @@ public class EventLogging extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_logging);
+        setContentView(R.layout.activity_event_list);
 
-        myListView = (ListView) findViewById(R.id.event_list_view);
+        //myListView = (ListView) findViewById(R.id.event_list_view);
 
         // Put the json data into the String json
 

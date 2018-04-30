@@ -1,4 +1,4 @@
-package com.example.drewcaltagirone.eventlogging;
+package com.example.drewcaltagirone.coffeebreak;
 
 import java.sql.Time;
 import java.util.Date;
