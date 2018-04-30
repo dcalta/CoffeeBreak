@@ -7,6 +7,6 @@ public class EventData {
     public String title;
     public String time;
     public String date;
-    public String gps;
+    public String location;
     public String description;
 }

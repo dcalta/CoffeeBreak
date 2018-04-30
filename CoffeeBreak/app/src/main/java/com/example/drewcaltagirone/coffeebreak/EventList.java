@@ -32,7 +32,7 @@ public class EventList extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
 
-        //myListView = (ListView) findViewById(R.id.event_list_view);
+        myListView = (ListView) findViewById(R.id.event_list_view);
 
         // Put the json data into the String json
 
@@ -74,7 +74,7 @@ public class EventList extends AppCompatActivity {
                 ed.title = dataList.getJSONObject(i).getString("title");
                 ed.time = dataList.getJSONObject(i).getString("time");
                 ed.date = dataList.getJSONObject(i).getString("date");
-                ed.gps = dataList.getJSONObject(i).getString("gps");
+                ed.location = dataList.getJSONObject(i).getString("location");
                 ed.description = dataList.getJSONObject(i).getString("description");
             } catch (JSONException e1) {
                 e1.printStackTrace();
@@ -114,7 +114,7 @@ public class EventList extends AppCompatActivity {
                 detailIntent.putExtra("title", selected.title);
                 detailIntent.putExtra("time", selected.time);
                 detailIntent.putExtra("date", selected.date);
-                detailIntent.putExtra("gps", selected.gps);
+                detailIntent.putExtra("location", selected.location);
                 detailIntent.putExtra("description", selected.description);
 
                 startActivity(detailIntent);

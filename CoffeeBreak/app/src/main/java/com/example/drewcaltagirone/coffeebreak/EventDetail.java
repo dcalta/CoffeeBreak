@@ -34,7 +34,7 @@ public class EventDetail extends AppCompatActivity {
         String title = i.getStringExtra("title");
         String time = i.getStringExtra("time");
         String date = i.getStringExtra("date");
-        String gps = i.getStringExtra("gps");
+        String location = i.getStringExtra("location");
         String description = i.getStringExtra("description");
 
         TextView t = (TextView)findViewById(R.id.textView);
@@ -46,7 +46,7 @@ public class EventDetail extends AppCompatActivity {
         t.setText("Title:   " + title);
         ti.setText("Time:   " + time);
         da.setText("Date:   " + date);
-        g.setText("GPS:   " + gps);
+        g.setText("Location:   " + location);
         d.setText("Description:   " + description);
     }
 
