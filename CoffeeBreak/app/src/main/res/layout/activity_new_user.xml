@@ -4,28 +4,84 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventDetail">
+    tools:context=".NewUser">
 
     <TextView
-        android:id="@+id/newTitle"
+        android:id="@+id/createText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="81dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="60dp"
-        android:text="TextView"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="66dp"
+        android:text="Create Account"
+        android:textSize="20dp"
+        android:textColor="#000000"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/newDes"
+    <EditText
+        android:id="@+id/nameCField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="16dp"
+        android:text="Name"
+        android:textSize="20dp"
+        android:textColor="#A0A0A0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText" />
+
+    <EditText
+        android:id="@+id/emailCField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="86dp"
+        android:text="Email"
+        android:textSize="20dp"
+        android:textColor="#A0A0A0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText" />
+
+    <EditText
+        android:id="@+id/compCField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="156dp"
+        android:text="Company"
+        android:textSize="20dp"
+        android:textColor="#A0A0A0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText" />
+
+    <EditText
+        android:id="@+id/passCField"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="226dp"
+        android:text="Password"
+        android:textSize="20dp"
+        android:textColor="#A0A0A0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText" />
+
+    <Button
+        android:id="@+id/createAccBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="81dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="70dp"
-        android:text="TextView"
+        android:layout_marginStart="61dp"
+        android:layout_marginTop="301dp"
+        android:text="Create Account"
+        android:textColor="#000000"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/createText" />
 
 </android.support.constraint.ConstraintLayout>
