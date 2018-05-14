@@ -32,6 +32,7 @@ public class Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
         Button b = findViewById(R.id.save);
+        Button plannerButton = findViewById(R.id.planner);
 
         Intent i = getIntent();
         final String name = i.getStringExtra("name");
@@ -67,6 +68,14 @@ public class Account extends AppCompatActivity {
             }
         });
 
+        plannerButton.setOnClickListener(new Button.OnClickListener() {
+            public void onClick(View v) {
+                Intent i = new Intent(Account.this, UserPlanner.class);
+                i.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(i);
+
+            }
+        });
 
     }
 

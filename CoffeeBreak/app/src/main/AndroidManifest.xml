@@ -23,6 +23,8 @@
         <activity android:name=".EventList"></activity>
         <activity android:name=".NewEvent"></activity>
         <activity android:name=".NewUser"></activity>
+        <activity android:name=".UserPlanner"></activity>
+
     </application>
 
 </manifest>

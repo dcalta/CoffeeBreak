@@ -114,7 +114,10 @@ public class NewEvent extends AppCompatActivity {
             }
         }
         Intent i = getIntent();
-        final String hostText = i.getStringExtra("email");
+//        Log.d("Check", hostText);
+        final String hostText = i.getStringExtra("host");
+        //Log.d("Check", hostText);
+
         b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
 
