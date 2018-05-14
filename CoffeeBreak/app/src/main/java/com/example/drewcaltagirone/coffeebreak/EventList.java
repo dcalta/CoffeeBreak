@@ -29,6 +29,10 @@ import java.sql.Time;
 import java.util.Date;
 
 public class EventList extends AppCompatActivity {
+    String name;
+    String email;
+    String comp;
+
     public JSONObject jos = null;
     public JSONArray ja = null;
     private ListView list;
@@ -43,11 +47,14 @@ public class EventList extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         setContentView(R.layout.activity_event_list);
-
         list = (ListView) findViewById(R.id.event_list_view);
         TextView text = findViewById(R.id.noItemText);
         text.setVisibility(View.INVISIBLE);
 
+        Intent in = getIntent();
+        name = in.getStringExtra("name");
+        email = in.getStringExtra("email");
+        comp = in.getStringExtra("comp");
         // Put the json data into the String json
 
         jos = null;
@@ -167,6 +174,7 @@ public class EventList extends AppCompatActivity {
         Log.d(TAG, String.format("" + item.getItemId()));
         // Handle item selection
         Intent i;
+
         switch (item.getItemId()) {
             case R.id.action_favorite:
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
@@ -179,7 +187,11 @@ public class EventList extends AppCompatActivity {
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */
-                i = new Intent(this, Account.class);
+
+                i = new Intent(EventList.this, Account.class);
+                i.putExtra("name", name);
+                i.putExtra("email", email);
+                i.putExtra("comp", comp);
                 startActivity(i);
                 break;
             case R.id.action_logout:
