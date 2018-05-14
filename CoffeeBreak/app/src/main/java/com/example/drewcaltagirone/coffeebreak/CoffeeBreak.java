@@ -46,8 +46,8 @@ public class CoffeeBreak extends AppCompatActivity implements View.OnClickListen
             String Password = getPass.getText().toString();
             Intent eventListIntent = new Intent(this, EventList.class);
             // pass some key value pairs to the next Activity (via the Intent)
-            eventListIntent.putExtra("title", Email);
-            eventListIntent.putExtra("description", Password);
+            eventListIntent.putExtra("email", Email);
+            eventListIntent.putExtra("pass", Password);
             startActivity(eventListIntent);
 
         }

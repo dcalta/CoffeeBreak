@@ -9,4 +9,5 @@ public class EventData {
     public String date;
     public String location;
     public String description;
+    public String host;
 }

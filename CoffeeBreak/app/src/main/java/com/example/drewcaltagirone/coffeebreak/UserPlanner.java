@@ -28,7 +28,7 @@ import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
 
-public class EventList extends AppCompatActivity {
+public class UserPlanner extends AppCompatActivity {
     String name;
     String email;
     String comp;
@@ -41,26 +41,27 @@ public class EventList extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event_list);
+        setContentView(R.layout.activity_user_planner);
     }
 
     protected void onResume() {
         super.onResume();
-        setContentView(R.layout.activity_event_list);
-        list = (ListView) findViewById(R.id.event_list_view);
-        TextView text = findViewById(R.id.noItemText);
+        setContentView(R.layout.activity_user_planner);
+        list = (ListView) findViewById(R.id.event_planner_view);
+        TextView text = findViewById(R.id.noEventText);
         text.setVisibility(View.INVISIBLE);
 
         Intent in = getIntent();
         name = in.getStringExtra("name");
         email = in.getStringExtra("email");
         comp = in.getStringExtra("comp");
+        String emailfile = email + ".ser";
         // Put the json data into the String json
 
         jos = null;
         try{
             // Reading a file that already exists
-            File f = new File(getFilesDir(), "file.ser");
+            File f = new File(getFilesDir(), emailfile);
             FileInputStream fi = new FileInputStream(f);
             ObjectInputStream o = new ObjectInputStream(fi);
             // Notice here that we are de-serializing a String object (instead of
@@ -122,22 +123,22 @@ public class EventList extends AppCompatActivity {
                 @Override
                 public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-                    EventData selected = aList.get(position);
-
-                    // Create an Intent to reference our new activity, then call startActivity
-                    // to transition into the new Activity.
-                    Intent detailIntent = new Intent(context, EventDetail.class);
-
-                    // pass some key value pairs to the next Activity (via the Intent)
-                    detailIntent.putExtra("title", selected.title);
-                    detailIntent.putExtra("time", selected.time);
-                    detailIntent.putExtra("date", selected.date);
-                    detailIntent.putExtra("location", selected.location);
-                    detailIntent.putExtra("description", selected.description);
-                    detailIntent.putExtra("host", selected.host);
-                    detailIntent.putExtra("position", Integer.toString(position));
-
-                    startActivity(detailIntent);
+//                    EventData selected = aList.get(position);
+//
+//                    // Create an Intent to reference our new activity, then call startActivity
+//                    // to transition into the new Activity.
+//                    Intent detailIntent = new Intent(context, EventDetail.class);
+//
+//                    // pass some key value pairs to the next Activity (via the Intent)
+//                    detailIntent.putExtra("title", selected.title);
+//                    detailIntent.putExtra("time", selected.time);
+//                    detailIntent.putExtra("date", selected.date);
+//                    detailIntent.putExtra("location", selected.location);
+//                    detailIntent.putExtra("description", selected.description);
+//                    detailIntent.putExtra("host", selected.host);
+//                    detailIntent.putExtra("position", Integer.toString(position));
+//
+//                    startActivity(detailIntent);
                 }
 
             });
@@ -158,56 +159,56 @@ public class EventList extends AppCompatActivity {
 
 
     // This method will just show the menu item (which is our button "ADD")
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        // the menu being referenced here is the menu.xml from res/menu/menu.xml
-        inflater.inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        // Inflate the menu items for use in the action bar
+//        MenuInflater inflater = getMenuInflater();
+//        // the menu being referenced here is the menu.xml from res/menu/menu.xml
+//        inflater.inflate(R.menu.menu, menu);
+//        return super.onCreateOptionsMenu(menu);
+//
+//    }
 
     /* Here is the event handler for the menu button that I forgot in class.
     The value returned by item.getItemID() is
      */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d(TAG, String.format("" + item.getItemId()));
-        // Handle item selection
-        Intent i;
-
-        switch (item.getItemId()) {
-            case R.id.action_favorite:
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-                i = new Intent(this, NewEvent.class);
-                i.putExtra("host", email);
-                startActivity(i);
-                break;
-            case R.id.action_account:
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-
-                i = new Intent(EventList.this, Account.class);
-                i.putExtra("name", name);
-                i.putExtra("email", email);
-                i.putExtra("comp", comp);
-                startActivity(i);
-                break;
-            case R.id.action_logout:
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-                i = new Intent(this, CoffeeBreak.class);
-                startActivity(i);
-                break;
-            default:
-                super.onOptionsItemSelected(item);
-                break;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//        Log.d(TAG, String.format("" + item.getItemId()));
+//        // Handle item selection
+//        Intent i;
+//
+//        switch (item.getItemId()) {
+//            case R.id.action_favorite:
+//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+//                Change Activity here (if that's what you're intending to do, which is probably is).
+//                 */
+//                i = new Intent(this, NewEvent.class);
+//                i.putExtra("host", email);
+//                startActivity(i);
+//                break;
+//            case R.id.action_account:
+//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+//                Change Activity here (if that's what you're intending to do, which is probably is).
+//                 */
+//
+//                i = new Intent(UserPlanner.this, Account.class);
+//                i.putExtra("name", name);
+//                i.putExtra("email", email);
+//                i.putExtra("comp", comp);
+//                startActivity(i);
+//                break;
+//            case R.id.action_logout:
+//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+//                Change Activity here (if that's what you're intending to do, which is probably is).
+//                 */
+//                i = new Intent(this, CoffeeBreak.class);
+//                startActivity(i);
+//                break;
+//            default:
+//                super.onOptionsItemSelected(item);
+//                break;
+//        }
+//        return true;
+//    }
 }
