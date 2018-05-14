@@ -100,6 +100,7 @@
         android:layout_marginStart="42dp"
         android:background="@drawable/user_pass_input"
         android:hint="Password"
+        android:inputType="textPassword"
         android:textColor="#A0A0A0"
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/createAccBut"
