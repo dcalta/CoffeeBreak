@@ -9,7 +9,22 @@
         app:showAsAction="always"
 
         />
+    <item
 
+        android:id="@+id/action_account"
+        android:title="Account"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="always"
+
+        />
+    <item
+
+        android:id="@+id/action_logout"
+        android:title="Log Out"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:showAsAction="always"
+
+        />
 
 
 </menu>

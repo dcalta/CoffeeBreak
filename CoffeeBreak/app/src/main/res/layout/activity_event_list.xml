@@ -14,4 +14,15 @@
         android:dividerHeight="2dp"
         android:layout_weight="1" />
 
+    <TextView
+        android:id="@+id/noItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="60dp"
+        android:text="No Events to Show. Try Making One!"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </android.support.constraint.ConstraintLayout>
