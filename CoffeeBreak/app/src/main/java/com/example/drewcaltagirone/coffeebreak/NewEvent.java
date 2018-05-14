@@ -113,7 +113,8 @@ public class NewEvent extends AppCompatActivity {
                 j.printStackTrace();
             }
         }
-
+        Intent i = getIntent();
+        final String hostText = i.getStringExtra("email");
         b.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
 
@@ -124,6 +125,7 @@ public class NewEvent extends AppCompatActivity {
                 String fifthText = fifth.getText().toString();
 
 
+
                 JSONObject temp = new JSONObject();
                 try {
                     temp.put("title", firstText);
@@ -131,6 +133,8 @@ public class NewEvent extends AppCompatActivity {
                     temp.put("date", thirdText);
                     temp.put("location", fourthText);
                     temp.put("description", fifthText);
+                    temp.put("host", hostText);
+
                 } catch (JSONException j) {
                     j.printStackTrace();
                 }

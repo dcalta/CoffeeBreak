@@ -94,6 +94,7 @@ public class EventList extends AppCompatActivity {
                     ld.date = ja.getJSONObject(i).getString("date");
                     ld.location = ja.getJSONObject(i).getString("location");
                     ld.description = ja.getJSONObject(i).getString("description");
+                    ld.host = ja.getJSONObject(i).getString("host");
                 } catch (JSONException e1) {
                     e1.printStackTrace();
                 }
@@ -133,6 +134,7 @@ public class EventList extends AppCompatActivity {
                     detailIntent.putExtra("date", selected.date);
                     detailIntent.putExtra("location", selected.location);
                     detailIntent.putExtra("description", selected.description);
+                    detailIntent.putExtra("host", selected.host);
                     detailIntent.putExtra("position", Integer.toString(position));
 
                     startActivity(detailIntent);
@@ -181,6 +183,7 @@ public class EventList extends AppCompatActivity {
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */
                 i = new Intent(this, NewEvent.class);
+                i.putExtra("host", email);
                 startActivity(i);
                 break;
             case R.id.action_account:

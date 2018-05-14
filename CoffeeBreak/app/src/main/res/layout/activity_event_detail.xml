@@ -61,6 +61,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="121dp"
+        android:layout_marginTop="51dp"
+        android:text="TextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 
     <TextView
         android:id="@+id/Title"
@@ -117,6 +128,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
+    <TextView
+        android:id="@+id/Host"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="81dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginTop="51dp"
+        android:text="Host:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
 
     <TextView
         android:id="@+id/AddComm"
@@ -124,22 +146,24 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="81dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="51dp"
+        android:layout_marginTop="21dp"
         android:text="Add a Comment:"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Event" />
+        app:layout_constraintTop_toBottomOf="@+id/Host" />
+
+
 
     <EditText
         android:id="@+id/comment"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginLeft="81dp"
         android:layout_marginStart="31dp"
-        android:layout_marginTop="67dp"
+        android:layout_marginTop="47dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Event" />
-    
+        app:layout_constraintTop_toBottomOf="@+id/Host" />
+
     <Button
         android:id="@+id/delBut"
         android:layout_width="wrap_content"
@@ -159,6 +183,17 @@
         android:layout_marginStart="271dp"
         android:layout_marginTop="156dp"
         android:text="Post"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/addBut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="31dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="156dp"
+        android:text="Go to Event"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 

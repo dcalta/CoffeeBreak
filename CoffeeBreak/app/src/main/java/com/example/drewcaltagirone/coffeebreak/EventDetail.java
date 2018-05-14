@@ -49,6 +49,7 @@ public class EventDetail extends AppCompatActivity {
         String date = i.getStringExtra("date");
         String location = i.getStringExtra("location");
         String description = i.getStringExtra("description");
+        String host = i.getStringExtra("host");
         final String pos = i.getStringExtra("position");
 
 
@@ -57,12 +58,15 @@ public class EventDetail extends AppCompatActivity {
         TextView da = (TextView)findViewById(R.id.textView3);
         TextView g = (TextView)findViewById(R.id.textView4);
         TextView d = (TextView)findViewById(R.id.textView5);
+        TextView h = (TextView)findViewById(R.id.textView6);
 
         t.setText(title);
         ti.setText(time);
         da.setText(date);
         g.setText(location);
         d.setText(description);
+        h.setText(host);
+
 
         final Context context = this;
         deleteButton.setOnClickListener(new Button.OnClickListener(){
