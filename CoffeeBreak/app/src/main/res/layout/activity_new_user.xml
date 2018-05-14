@@ -4,84 +4,118 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NewUser">
+    android:background="@drawable/bg_master"
+    tools:context=".NewUser"
+    tools:layout_editor_absoluteY="25dp">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="172dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/createText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/login_logo" />
 
     <TextView
         android:id="@+id/createText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="66dp"
-        android:text="Create Account"
-        android:textSize="20dp"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginLeft="44dp"
+        android:layout_marginRight="44dp"
+        android:layout_marginStart="44dp"
+        android:background="@drawable/create_title"
         android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/nameCField"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     <EditText
         android:id="@+id/nameCField"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="16dp"
-        android:text="Name"
-        android:textSize="20dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/user_pass_input"
+        android:hint="Name"
         android:textColor="#A0A0A0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/emailCField"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createText" />
+        app:layout_constraintTop_toBottomOf="@+id/createText" />
 
     <EditText
         android:id="@+id/emailCField"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="86dp"
-        android:text="Email"
-        android:textSize="20dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/user_pass_input"
+        android:hint="Email"
         android:textColor="#A0A0A0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/compCField"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createText" />
+        app:layout_constraintTop_toBottomOf="@+id/nameCField" />
 
     <EditText
         android:id="@+id/compCField"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="156dp"
-        android:text="Company"
-        android:textSize="20dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/user_pass_input"
+        android:hint="Company"
         android:textColor="#A0A0A0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/passCField"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createText" />
+        app:layout_constraintTop_toBottomOf="@+id/emailCField" />
 
     <EditText
         android:id="@+id/passCField"
-        android:layout_width="300dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="226dp"
-        android:text="Password"
-        android:textSize="20dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginRight="42dp"
+        android:layout_marginStart="42dp"
+        android:background="@drawable/user_pass_input"
+        android:hint="Password"
         android:textColor="#A0A0A0"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/createAccBut"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/createText" />
+        app:layout_constraintTop_toBottomOf="@+id/compCField" />
 
     <Button
         android:id="@+id/createAccBut"
-        android:layout_width="wrap_content"
+        android:layout_width="299dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="301dp"
-        android:text="Create Account"
-        android:textColor="#000000"
-        android:textSize="20dp"
+        android:layout_marginBottom="22dp"
+        android:background="@drawable/create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/createText" />
+        app:layout_constraintTop_toBottomOf="@+id/passCField" />
 
 </android.support.constraint.ConstraintLayout>
