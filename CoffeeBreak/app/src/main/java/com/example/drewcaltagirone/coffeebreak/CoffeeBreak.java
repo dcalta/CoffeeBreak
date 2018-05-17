@@ -3,6 +3,7 @@ package com.example.drewcaltagirone.coffeebreak;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -30,6 +31,7 @@ public class CoffeeBreak extends AppCompatActivity implements View.OnClickListen
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_coffee_break);
+
         login = findViewById(R.id.loginBut);
         createAcc = findViewById(R.id.createAccBut);
         login.setOnClickListener(this);

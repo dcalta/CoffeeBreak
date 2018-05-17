@@ -3,6 +3,7 @@ package com.example.drewcaltagirone.coffeebreak;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Context;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,6 +44,17 @@ public class EventList extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+    }
+
+    // This method will just show the menu item (which is our button "ADD")
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     protected void onResume() {
@@ -156,18 +169,6 @@ public class EventList extends AppCompatActivity {
         }
     }
 
-
-    // This method will just show the menu item (which is our button "ADD")
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        // the menu being referenced here is the menu.xml from res/menu/menu.xml
-        inflater.inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-
-    }
-
     /* Here is the event handler for the menu button that I forgot in class.
     The value returned by item.getItemID() is
      */
@@ -179,10 +180,11 @@ public class EventList extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_favorite:
+                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */
-                i = new Intent(this, NewEvent.class);
+                i = new Intent(EventList.this, NewEvent.class);
                 i.putExtra("host", email);
                 startActivity(i);
                 break;
@@ -190,7 +192,6 @@ public class EventList extends AppCompatActivity {
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */
-
                 i = new Intent(EventList.this, Account.class);
                 i.putExtra("name", name);
                 i.putExtra("email", email);

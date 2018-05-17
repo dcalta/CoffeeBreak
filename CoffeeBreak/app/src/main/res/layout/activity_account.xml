@@ -4,15 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventDetail">
+    android:background="@drawable/bg_master"
+    tools:context=".EventDetail"
+    >
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/Name"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="132dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,9 +30,9 @@
         android:id="@+id/Email"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="56dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text" />
@@ -32,23 +41,22 @@
         android:id="@+id/Company"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="121dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginLeft="128dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="88dp"
         android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text2" />
-
 
 
     <TextView
         android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="40dp"
-        android:text="Name"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="144dp"
+        android:background="@drawable/name_aa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -56,10 +64,10 @@
         android:id="@+id/text2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="60dp"
-        android:text="Email:"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="72dp"
+        android:background="@drawable/email_aa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text" />
 
@@ -67,34 +75,33 @@
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="31dp"
-        android:layout_marginTop="110dp"
-        android:text="Company:"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="104dp"
+        android:background="@drawable/company_aa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/text2" />
 
 
-
     <Button
         android:id="@+id/save"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="86dp"
-        android:text="Save"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="64dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/save_button_aa"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text3" />
 
     <Button
         android:id="@+id/planner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="70dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="68dp"
-        android:text="Planner"
+        android:layout_width="114dp"
+        android:layout_height="46dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="88dp"
+        android:background="@drawable/planner_aa"
         app:layout_constraintStart_toEndOf="@+id/save"
         app:layout_constraintTop_toBottomOf="@+id/Company" />
 

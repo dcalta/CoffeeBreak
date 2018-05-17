@@ -3,6 +3,7 @@ package com.example.drewcaltagirone.coffeebreak;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -17,6 +18,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Context;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,6 +44,9 @@ public class UserPlanner extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_planner);
+
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
     }
 
     protected void onResume() {
@@ -158,57 +163,49 @@ public class UserPlanner extends AppCompatActivity {
     }
 
 
-    // This method will just show the menu item (which is our button "ADD")
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        // Inflate the menu items for use in the action bar
-//        MenuInflater inflater = getMenuInflater();
-//        // the menu being referenced here is the menu.xml from res/menu/menu.xml
-//        inflater.inflate(R.menu.menu, menu);
-//        return super.onCreateOptionsMenu(menu);
-//
-//    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
 
     /* Here is the event handler for the menu button that I forgot in class.
     The value returned by item.getItemID() is
      */
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//        Log.d(TAG, String.format("" + item.getItemId()));
-//        // Handle item selection
-//        Intent i;
-//
-//        switch (item.getItemId()) {
-//            case R.id.action_favorite:
-//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-//                Change Activity here (if that's what you're intending to do, which is probably is).
-//                 */
-//                i = new Intent(this, NewEvent.class);
-//                i.putExtra("host", email);
-//                startActivity(i);
-//                break;
-//            case R.id.action_account:
-//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-//                Change Activity here (if that's what you're intending to do, which is probably is).
-//                 */
-//
-//                i = new Intent(UserPlanner.this, Account.class);
-//                i.putExtra("name", name);
-//                i.putExtra("email", email);
-//                i.putExtra("comp", comp);
-//                startActivity(i);
-//                break;
-//            case R.id.action_logout:
-//                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-//                Change Activity here (if that's what you're intending to do, which is probably is).
-//                 */
-//                i = new Intent(this, CoffeeBreak.class);
-//                startActivity(i);
-//                break;
-//            default:
-//                super.onOptionsItemSelected(item);
-//                break;
-//        }
-//        return true;
-//    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Log.d(TAG, String.format("" + item.getItemId()));
+        // Handle item selection
+        Intent i;
+
+        switch (item.getItemId()) {
+            case R.id.action_favorite:
+                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, NewEvent.class);
+                startActivity(i);
+                break;
+            case R.id.action_account:
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, Account.class);
+                startActivity(i);
+                break;
+            case R.id.action_logout:
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, CoffeeBreak.class);
+                startActivity(i);
+                break;
+            default:
+                super.onOptionsItemSelected(item);
+                break;
+        }
+        return true;
+    }
 }

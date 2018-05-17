@@ -1,30 +1,19 @@
-<menu xmlns:android="http://schemas.android.com/apk/res/android" >
-
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <!-- the title attribute "action_favorite" needs to be added in the strings.xml file -->
-    <item
 
+    <item
         android:id="@+id/action_favorite"
-        android:title="Add Event"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:showAsAction="always"
-
-        />
+        android:title="@string/add_event"
+        app:showAsAction="ifRoom|withText" />
     <item
-
         android:id="@+id/action_account"
-        android:title="Account"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:showAsAction="always"
-
-        />
+        android:title="@string/account"
+        app:showAsAction="ifRoom|withText" />
     <item
-
         android:id="@+id/action_logout"
-        android:title="Log Out"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        app:showAsAction="always"
-
-        />
-
+        android:title="@string/logOut"
+        app:showAsAction="ifRoom|withText" />
 
 </menu>

@@ -3,6 +3,7 @@ package com.example.drewcaltagirone.coffeebreak;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.Button;
 import android.widget.TextView;
 import android.util.Log;
@@ -18,6 +19,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.content.Context;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -39,10 +41,16 @@ public class EventDetail extends AppCompatActivity {
     public JSONArray newArr = null;
     public JSONArray list = null;
 
+    Toolbar toolbar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         Button deleteButton = findViewById(R.id.delBut);
         Button goingButton = findViewById(R.id.addBut);
 
@@ -220,5 +228,46 @@ public class EventDetail extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        Intent i;
+
+        switch (item.getItemId()) {
+            case R.id.action_favorite:
+                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, NewEvent.class);
+                startActivity(i);
+                break;
+            case R.id.action_account:
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, Account.class);
+                startActivity(i);
+                break;
+            case R.id.action_logout:
+                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
+                Change Activity here (if that's what you're intending to do, which is probably is).
+                 */
+                i = new Intent(this, CoffeeBreak.class);
+                startActivity(i);
+                break;
+            default:
+                super.onOptionsItemSelected(item);
+                break;
+        }
+        return true;
+    }
 
 }

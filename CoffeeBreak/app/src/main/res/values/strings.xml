@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">CoffeeBreak</string>
 
+    <string name="add_event">Add Event</string>
+    <string name="account">Account</string>
+    <string name="logOut">Log Out</string>
+
 </resources>
