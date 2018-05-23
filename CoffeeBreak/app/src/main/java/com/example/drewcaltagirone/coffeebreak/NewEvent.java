@@ -72,8 +72,6 @@ public class NewEvent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_event);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         final EditText first = findViewById(R.id.titleInput);
         final EditText second = findViewById(R.id.timeInput);
@@ -185,7 +183,7 @@ public class NewEvent extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_favorite:
-                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */

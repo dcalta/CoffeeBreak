@@ -4,23 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventDetail">
-
-    <include
-        android:id="@+id/toolbar"
-        layout="@layout/toolbar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp"
-        tools:ignore="MissingConstraints" />
+    android:background="@drawable/bg_master"
+    tools:context=".EventDetail"
+    tools:layout_editor_absoluteY="81dp">
 
     <TextView
         android:id="@+id/newTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="81dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="10dp"
-        android:text="Title:"
+        android:layout_width="72dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/title_ael"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -28,103 +27,133 @@
         android:id="@+id/titleInput"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="88dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/newTitle" />
 
     <TextView
         android:id="@+id/newTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="56dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="112dp"
-        android:text="Time of Event:"
+        android:layout_width="102dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/timeevent_ane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.127"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newTitle" />
+        app:layout_constraintTop_toBottomOf="@+id/titleInput" />
 
 
     <EditText
         android:id="@+id/timeInput"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newTime" />
 
     <TextView
         android:id="@+id/newDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="88dp"
-        android:text="Date of Event:"
+        android:layout_width="110dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/dateevent_ane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.131"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newTime" />
+        app:layout_constraintTop_toBottomOf="@+id/timeInput" />
 
 
     <EditText
         android:id="@+id/dateInput"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newDate" />
 
 
     <TextView
         android:id="@+id/newLoc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="72dp"
-        android:text="Location of Event:"
+        android:layout_width="144dp"
+        android:layout_height="23dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/locationevent_ane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDate" />
+        app:layout_constraintTop_toBottomOf="@+id/dateInput" />
 
 
     <EditText
         android:id="@+id/locInput"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="45dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newLoc" />
 
     <TextView
         android:id="@+id/newDes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="56dp"
-        android:text="Event Description:"
+        android:layout_width="143dp"
+        android:layout_height="27dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/eventdescr_ane"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.151"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newLoc" />
+        app:layout_constraintTop_toBottomOf="@+id/locInput" />
 
 
     <EditText
         android:id="@+id/desInput"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/newDes" />
 
@@ -133,11 +162,17 @@
         android:id="@+id/enterBut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="72dp"
-        android:text="Enter"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/enter_ane"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.137"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/newDes" />
+        app:layout_constraintTop_toBottomOf="@+id/desInput" />
 
 </android.support.constraint.ConstraintLayout>

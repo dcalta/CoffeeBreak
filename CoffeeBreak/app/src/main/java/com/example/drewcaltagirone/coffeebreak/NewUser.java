@@ -1,5 +1,6 @@
 package com.example.drewcaltagirone.coffeebreak;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,17 +29,12 @@ import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
 
-public class NewUser extends AppCompatActivity {
-
-    Toolbar toolbar;
+public class NewUser extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_new_user);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Button b = findViewById(R.id.createAccBut);
         final Context context = this;

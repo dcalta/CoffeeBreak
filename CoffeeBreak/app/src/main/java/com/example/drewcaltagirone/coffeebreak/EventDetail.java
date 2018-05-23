@@ -41,15 +41,11 @@ public class EventDetail extends AppCompatActivity {
     public JSONArray newArr = null;
     public JSONArray list = null;
 
-    Toolbar toolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_detail);
-
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
         Button deleteButton = findViewById(R.id.delBut);
         Button goingButton = findViewById(R.id.addBut);

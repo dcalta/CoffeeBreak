@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/login_logo" />
+        android:src="@drawable/login_logo" />
 
     <TextView
         android:id="@+id/createText"
@@ -110,7 +110,7 @@
 
     <Button
         android:id="@+id/createAccBut"
-        android:layout_width="299dp"
+        android:layout_width="313dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="22dp"
         android:background="@drawable/create"

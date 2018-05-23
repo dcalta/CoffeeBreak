@@ -45,8 +45,6 @@ public class UserPlanner extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user_planner);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
     }
 
     protected void onResume() {
@@ -181,7 +179,7 @@ public class UserPlanner extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_favorite:
-                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */

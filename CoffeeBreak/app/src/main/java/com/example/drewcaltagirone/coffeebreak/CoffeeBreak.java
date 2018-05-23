@@ -1,5 +1,6 @@
 package com.example.drewcaltagirone.coffeebreak;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
 
 import java.io.InputStream;
 
-public class CoffeeBreak extends AppCompatActivity implements View.OnClickListener{
+public class CoffeeBreak extends Activity implements View.OnClickListener{
     Button login;
     Button createAcc;
 
