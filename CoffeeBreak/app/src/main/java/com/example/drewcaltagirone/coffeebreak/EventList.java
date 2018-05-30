@@ -178,7 +178,7 @@ public class EventList extends AppCompatActivity {
 
         switch (item.getItemId()) {
             case R.id.action_favorite:
-                Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
+                //Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
                 /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
                 Change Activity here (if that's what you're intending to do, which is probably is).
                  */
