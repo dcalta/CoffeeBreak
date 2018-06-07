@@ -161,49 +161,4 @@ public class UserPlanner extends AppCompatActivity {
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-        return super.onCreateOptionsMenu(menu);
-    }
-
-    /* Here is the event handler for the menu button that I forgot in class.
-    The value returned by item.getItemID() is
-     */
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        Log.d(TAG, String.format("" + item.getItemId()));
-        // Handle item selection
-        Intent i;
-
-        switch (item.getItemId()) {
-            case R.id.action_favorite:
-                //Toast.makeText(getApplicationContext(), "Hello 1", Toast.LENGTH_LONG).show();
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-                i = new Intent(this, NewEvent.class);
-                startActivity(i);
-                break;
-            case R.id.action_account:
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-                i = new Intent(this, Account.class);
-                startActivity(i);
-                break;
-            case R.id.action_logout:
-                /*the R.id.action_favorite is the ID of our button (defined in strings.xml).
-                Change Activity here (if that's what you're intending to do, which is probably is).
-                 */
-                i = new Intent(this, CoffeeBreak.class);
-                startActivity(i);
-                break;
-            default:
-                super.onOptionsItemSelected(item);
-                break;
-        }
-        return true;
-    }
 }
