@@ -57,6 +57,7 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat.OnRequestPermissionsResultCallback;
 import android.widget.Toast;
 
+/* Followed Professor Dustin Adam's method on how to make a new event and serialize it from ListView*/
 
 public class NewEvent extends AppCompatActivity {
     private final String TAG = "TESTGPS";
@@ -75,9 +76,9 @@ public class NewEvent extends AppCompatActivity {
 
         final EditText first = findViewById(R.id.titleInput);
         final EditText second = findViewById(R.id.timeInput);
-        final EditText third = findViewById(R.id.titleInput);
-        final EditText fourth = findViewById(R.id.titleInput);
-        final EditText fifth = findViewById(R.id.timeInput);
+        final EditText third = findViewById(R.id.dateInput);
+        final EditText fourth = findViewById(R.id.locInput);
+        final EditText fifth = findViewById(R.id.desInput);
 
         Button b = findViewById(R.id.enterBut);
 

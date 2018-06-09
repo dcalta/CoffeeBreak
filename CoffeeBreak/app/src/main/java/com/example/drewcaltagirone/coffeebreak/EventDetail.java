@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
+/* Followed Professor Dustin Adam's method on how to display information from ListVIew*/
 
 public class EventDetail extends AppCompatActivity {
     public JSONObject jos = null;

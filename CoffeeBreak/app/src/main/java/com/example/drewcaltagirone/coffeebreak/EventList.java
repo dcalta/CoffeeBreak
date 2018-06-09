@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.io.InputStream;
 import java.sql.Time;
 import java.util.Date;
+/* Followed Professor Dustin Adam's method on how to make a list from ListView and use Serialization*/
 
 public class EventList extends AppCompatActivity {
     String name;
